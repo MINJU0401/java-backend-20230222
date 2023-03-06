@@ -1,0 +1,19 @@
+package example.SignUp;
+
+import java.util.Scanner;
+
+public class SignUp2 {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("아이디 : ");
+		String userId = scanner.nextLine();
+		System.out.println("패스워드 : ");
+		String userPassword = scanner.nextLine();
+		System.out.println("패스워드 확인 : ");
+		String userPasswordCheck = scanner.nextLine();
+		System.out.println("이름 : ");
+		String userName = scanner.nextLine();
+	}
+
+}

@@ -1,0 +1,21 @@
+package chapter1.F_Operator;
+
+//	연산자
+//	산술연산자, 대입연산자, 비교연산자, 논리연산자, 삼항연산자
+public class Operator {
+
+	public static void main(String[] args) {
+		//	산술 연산자
+		
+		//	1) 덧셈 연산자 : + 
+		//	좌항에 우항을 더한 값을 반환
+		int addResult = 8 + 3;
+		System.out.println(addResult);
+		
+		//	2) 뺄셈 연산자 : -
+		//	좌항에 우항을 뺀 값을 반환
+		int minusResult = 8 - 3;
+		System.out.println(minusResult);
+	}
+
+}

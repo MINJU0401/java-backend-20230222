@@ -1,0 +1,12 @@
+package chapter1.B_constant;
+
+// 2. 상수
+// 변수와 마찬가지로 데이터를 보관할 수 있는 공간
+// 딘, 상수는 한번 초기화하면 변경 불가능
+public class Constant {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+package chapter1.D_IO;
+
+public class IO {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

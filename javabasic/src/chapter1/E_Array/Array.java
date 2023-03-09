@@ -6,6 +6,7 @@ package chapter1.E_Array;
 //	new 연산자로 생성할 수 있음
 //	배열은 실제 데이터가 저장되는 것이 아니라
 //	데이터 배열이 저장된 첫번째 메모리 주소가 저장됨 
+
 public class Array {
 
 	public static void main(String[] args) {
@@ -61,7 +62,7 @@ public class Array {
 		// extraScoreList의 0번째 index를 수정했고, scoreList의 값은 변동이 없을거라고 예상했지만 함께 수정되어버림
 		//	데이터값 뿐만 아니라 메모리 주소까지 복사되어버렸기 때문임
 		//	실제로 출력해보면 extraScoreList와 scoreList의 주소는 동일함
-		//	배열 복사를 이용하여 복사해야함
-		}
-	
+		//	배열 복사를 이용하여 복사해야함		
 	}
+
+}

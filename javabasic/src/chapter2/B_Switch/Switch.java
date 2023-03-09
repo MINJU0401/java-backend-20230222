@@ -6,10 +6,11 @@ import java.util.Scanner;
 //	비교할 변수를 case 값과 비교하여 같은 case를 찾아 해당 case 구문부터 끝까지 실행
 //	break문으로 해당 switch를 종료
 //	default문으로 해당하는 case가 없을 때 실행할 구문을 작성
+
 public class Switch {
 
 	public static void main(String[] args) {
-		//	switch 사용방법
+//		switch 사용방법
 //		switch (비교할 대상) {
 //		case 비교할 값1 : 
 //			비교할 값1 과 비교할 대상이 같을 경우 실행할 코드
@@ -42,6 +43,7 @@ public class Switch {
 			System.out.println("범위초과");
 			break;  //  break문을 작성해도 되지만, 필수는 아님
 		}
-		}
+
 	}
 
+}

@@ -3,12 +3,13 @@ package example.SignIn;
 import java.util.Scanner;
 
 //	로그인 프로세스 구현
+
 public class SignIn {
 
 	//	입력
 	//	아이디, 비밀번호
 	public static void main(String[] args) {
-		final String ID = "qwer1234";  // final로 선언 시 무조건 대문자 사용
+		final String ID = "qwer1234";  // final로 선언 시 무조건 변수명 대문자 사용
 		final String PASSWORD = "qwer1234";
 		
 		//	1. 사용자로부터 아이디와 패스워드 입력받음
@@ -47,5 +48,3 @@ public class SignIn {
 	}
 	//	결과
 	//	성공, 실패 (모두 입력하지 않았을 때, 정보가 일치하지 않을 때)
-
-

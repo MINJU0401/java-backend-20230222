@@ -68,5 +68,6 @@ public class For {
 		for (int number: intArray5) System.out.println(number);
 			
 				
+	}
 
-}}
+}

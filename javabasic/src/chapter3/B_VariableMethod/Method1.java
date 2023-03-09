@@ -14,54 +14,52 @@ package chapter3.B_VariableMethod;
 //	파라미터(매개변수)가 있는 메서드는 반드시 파라미터 범위 등과 같은 검증을 먼저 해줘야 함
 
 class HigherMathematics {	
-	static final double PIE = 3.14;
-	
-	//	클래스 변수와 마찬가지로 메서드에 static을 포함하게 되면 클래스 메서드로 사용할 수 있음 (클래스로 사용할 수 있음)
+static final double PIE = 3.14;
 
-	static double getTriangleSize(double underside, double height) {  // 삼각형의 크기
-		if ((underside <= 0) || (height <= 0) ) {
-			System.out.println("밑변과 높이는 양수이어야 합니다.");
-			return 0;
-		}
-		double trianglesize = 0.5 * underside * height;
-		height = 12;
-		return trianglesize;
+//	클래스 변수와 마찬가지로 메서드에 static을 포함하게 되면 클래스 메서드로 사용할 수 있음 (클래스로 사용할 수 있음)
+
+static double getTriangleSize(double underside, double height) {  // 삼각형의 크기
+	if ((underside <= 0) || (height <= 0) ) {
+		System.out.println("밑변과 높이는 양수이어야 합니다.");
+		return 0;
 	}
-	static double getCircleSize(double radius) {  // 원의 크기
-		if (radius <= 0) {
-			System.out.println("반지름은 양수이어야 합니다.");
-			return 0;
-		}
-		double circlesize = PIE * radius * radius;
-		return circlesize;
+	double trianglesize = 0.5 * underside * height;
+	return trianglesize;
+}
+static double getCircleSize(double radius) {  // 원의 크기
+	if (radius <= 0) {
+		System.out.println("반지름은 양수이어야 합니다.");
+		return 0;
 	}
-	static double getCircumference(double radius) {  // 원의 둘레
-		if (radius <= 0) {
-			System.out.println("반지름은 양수이어야 합니다.");
-			return 0;
-		}
-		double circumference = PIE * 2 * radius;
-		return circumference;
+	double circlesize = PIE * radius * radius;
+	return circlesize;
+}
+static double getCircumference(double radius) {  // 원의 둘레
+	if (radius <= 0) {
+		System.out.println("반지름은 양수이어야 합니다.");
+		return 0;
 	}
+	double circumference = PIE * 2 * radius;
+	return circumference;
+}
 }
 
 public class Method1 {
 	
 	//	메서드의 선언부
 	//	[접근제어자 기타제어자] 반환타입 메서드명([매개변수], ... )
-	public static void main(String[] args)
-	//	메서드의 구현부
-	//	실제 프로그램의 절차를 작성하는 부분
-	//	return 데이터; 로 키워드로 결과를 반환시켜줌
-	//	(반환 타입이 void이면 return;으로 메서드를 종료시킴)
-	{
-		double size = HigherMathematics.getTriangleSize(0, 10);
-		System.out.println(size);
-		double circleSize = HigherMathematics.getCircleSize(-1);
-		System.out.println(circleSize);
-		double circumference = HigherMathematics.getCircumference(0);
-		System.out.println(circumference);
-	}
 	
+	public static void main(String[] args) {
+		//	메서드의 구현부
+		//	실제 프로그램의 절차를 작성하는 부분
+		//	return 데이터; 로 키워드로 결과를 반환시켜줌
+		//	(반환 타입이 void이면 return;으로 메서드를 종료시킴)
 
+			double size = HigherMathematics.getTriangleSize(0, 10);
+			System.out.println(size);
+			double circleSize = HigherMathematics.getCircleSize(-1);
+			System.out.println(circleSize);
+			double circumference = HigherMathematics.getCircumference(0);
+			System.out.println(circumference);		
+	}
 }

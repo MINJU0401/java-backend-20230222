@@ -2,7 +2,7 @@ package chapter3.D_Constructor;
 
 //	생성자
 //	인스턴스가 생성될 때 호출되는 인스턴스 '초기화 메서드'
-//	인스턴스 변수의 초기화 작업에 사용
+//	인스턴스 변수의 초기화 작업에 사용 
 //	인스턴스 생성시에 실행되어야 할 작업을 작성하는 위치
 
 //	생성자의 조건
@@ -10,6 +10,7 @@ package chapter3.D_Constructor;
 //	생성자는 반환값이 없음
 
 class Circle {
+	
 	double radius;
 	double diameter;
 	double circumference;
@@ -35,7 +36,7 @@ class Circle {
 		this.area = 3.14 * this.radius * this.radius;	
 	}
 	
-	//	생성자를 이용한 인스턴스 복사
+	//	생성자를 이용한 인스턴스 복사 (복사대상인 인스턴스를 매개변수로 받아와서 쓰면 된다)
 	Circle(Circle circle) {
 		this.radius = circle.radius;
 		this.diameter = circle.diameter;

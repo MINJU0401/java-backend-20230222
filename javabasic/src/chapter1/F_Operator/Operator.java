@@ -2,27 +2,28 @@ package chapter1.F_Operator;
 
 //	연산자
 //	산술연산자, 대입연산자, 비교연산자, 논리연산자, 삼항연산자
+
 public class Operator {
 
 	public static void main(String[] args) {
 		//	산술 연산자(정수나 실수. 숫자 연산)
 		
-		//	1) 덧셈 연산자 : + 
+		//	덧셈 연산자 : + 
 		//	좌항에 우항을 더한 값을 반환
 		int addResult = 8 + 3;
 		System.out.println(addResult);
 		
-		//	2) 뺄셈 연산자 : -
+		//	뺄셈 연산자 : -
 		//	좌항에 우항을 뺀 값을 반환
 		int minusResult = 8 - 3;
 		System.out.println(minusResult);
 		
-		//	3) 곱셈 연산자 : *
+		//	곱셈 연산자 : *
 		//	좌항에 우항을 곱한 값을 반환
 		int multiResult = 8 * 3;
 		System.out.println(multiResult);
 		
-		//	4) 나눗셈 연산자 : /
+		//	나눗셈 연산자 : /
 		//	좌항에 우항을 나눈 값을 반환
 		int remainderResult = 8 / 3;
 		float float1 = 2.6666F;
@@ -43,11 +44,12 @@ public class Operator {
 		//	실수와 정수를 연산하면 실수가 반환됨
 		//	실수와 실수를 연산하면 실수가 반환됨
 		
-		//	증감 연산자 : '변수' 자신을 1 증가 혹은 감소시키는 연산자
+		//	증감 연산자 - '변수' 자신을 1 증가 혹은 감소시키는 연산자
 		
 		//	증가 연산자 : ++
 		//	연산자의 좌항 혹은 우항의 값을 1 증가시킴
-		//	좌항에 붙이는 것과 우항에 붙이는 것의 차이? 컴퓨터는 좌-우, 상-하 순서로 데이터를 읽음. 좌항에 증가연산자가 있는 경우, 연산 후 1 증가된 값으로 출력됨. 
+		//	좌항에 붙이는 것과 우항에 붙이는 것의 차이? 컴퓨터는 좌-우, 상-하 순서로 데이터를 읽음. 
+		//	좌항에 증가연산자가 있는 경우, 연산 후 1 증가된 값으로 출력됨. 
 		//	우항에 증가연산자가 있는 경우, 출력시는 보이지 않으나 저장된 값만 1 증가된 상태. 다음 출력 시에 증가된 값으로 출력됨. 
 		int integer1 = 10;
 		++integer1;
@@ -177,6 +179,6 @@ public class Operator {
 //			}
 //		
 		System.out.println(string1);
-		
 	}
+
 }

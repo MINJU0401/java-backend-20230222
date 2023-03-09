@@ -17,6 +17,7 @@ public class If {
 		}
 		//	if문의 경우 코드 블럭에 오는 실행할 코드가 하나의 구문이면 
 		//	중괄호{} 를 제거하고 사용 가능
+		
 		if (age > 19) System.out.println("성인입니다.");
 		
 		System.out.println("조건 검사 완료");

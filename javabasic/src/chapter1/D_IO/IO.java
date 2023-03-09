@@ -1,10 +1,11 @@
 package chapter1.D_IO;
 
 import java.util.Scanner;
+//import java.util.*;   < 이렇게 하면 util에 있는 대부분의 클래스를 받아올 수 있지만, 필요한 것만 적어주는게 좋다.
 
-//	IO = Input, Output (입력, 출력)
-//	console을 통해서 개발자로부터 입력을 받을 때 Scanner 객체를 사용함
-//  console로 데이터를 출력할 땐 System 객체를 사용함
+//IO = Input, Output (입력, 출력)
+//console을 통해서 개발자로부터 입력을 받을 때 Scanner 객체를 사용함
+//console로 데이터를 출력할 땐 System 객체를 사용함
 
 public class IO {
 

@@ -101,7 +101,7 @@ public class ClassObject {
 		iPhone14Pro = iPhone14;
 		iPhone14Pro.telNumber = "010-9999-9999";
 		
-		//	객체배열
+		//	객체 배열
 		//	클래스명[] 객체배열명 = new 클래스명[길이];
 		SmartPhone[] smartPhoneList = new SmartPhone[3];
 		

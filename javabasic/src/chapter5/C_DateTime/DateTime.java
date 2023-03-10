@@ -1,10 +1,13 @@
 package chapter5.C_DateTime;
 
 import java.text.SimpleDateFormat;
+import java.time.DayOfWeek;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.Month;
+import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
@@ -29,7 +32,7 @@ public class DateTime {
 		//	Date class
 		//	날짜를 관리해주는 클래스
 		//	주로 날짜와 관련된 데이터 타입을 취급할 때 사용
-		Date date = new Date();
+		Date date = new Date();				  
 		System.out.println(date);
 		
 		System.out.println(date.getMonth());  // 현재 3월인데, 2로 출력됨(Java에서는 1월이 0이기 때문)
@@ -76,6 +79,34 @@ public class DateTime {
 		LocalDateTime localDateTimeOf = LocalDateTime.of(localDateOf, localTimeOf);
 		System.out.println(localDateTimeOf);
 		
+		//	특정 날짜 혹은 시간 가져오기
+		//	.getXXX();
+		int year = localDateTime.getYear();
+		
+		int month = localDateTime.getMonthValue();
+		Month enumMonth = localDateTime.getMonth();
+		
+		int dayOfYear = localDateTime.getDayOfYear();
+		int dayOfMonth = localDateTime.getDayOfMonth();
+		DayOfWeek dayOfWeek = localDateTime.getDayOfWeek();
+		
+		boolean isLeapYear = localDate.isLeapYear();  // 윤달
+		
+		int hour = localDateTime.getHour();
+		int minute = localDateTime.getMinute();
+		int second = localDateTime.getSecond();
+		int nano = localDateTime.getNano();
+		
+		//	특정 날짜 및 시간 변경 (직접 변경, 더하기, 빼기)
+		//	직접 변경 : withXXX(int 타입 데이터);
+		//	더하기 - 빼기 : plusXXX(long 타입 데이터), minusXXX(long 타입 데이터)
+		localDateTime = localDateTime.withYear(2012).plusWeeks(4).minusHours(9);
+		localDateTime = localDateTime.withDayOfYear(1).plusMinutes(50).minusNanos(50000);
+		
+		Instant instant = localDateTime.atZone(ZoneId.systemDefault()).toInstant();
+		Date datetime = Date.from(instant);
+		
+		System.out.println(datetime);
 
 	}
 

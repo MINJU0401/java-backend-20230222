@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class ApiClass {
 
 	public static void main(String[] args) {
-		
 		//	Object class
 		//	모든 class의 조상 class
 		Object object = new Scanner(System.in);
@@ -39,7 +38,7 @@ public class ApiClass {
 		//	indexOf(문자열);
 		//	해당하는 문자열이 존재한다면 그 위치의 첫번째 인덱스 번호를 반환
 		//	해당 문자열이 존재하지 않으면 -1 반환
-		int stringIndex = string.indexOf("ais");
+		int stringIndex = string.indexOf("string");
 		System.out.println(stringIndex);
 		
 		//	.trim();

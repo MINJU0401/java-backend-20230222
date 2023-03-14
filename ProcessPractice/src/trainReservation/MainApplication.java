@@ -90,6 +90,9 @@ public class MainApplication {
 					continue;
 				}
 				
+				boolean isPossible = false;
+				
+				
 				for (int stopStationIndex = 0; stopStationIndex < stopStations.size(); stopStationIndex++) {
 					
 					String stationName = stopStations.get(stopStationIndex).getStationName();
@@ -101,10 +104,25 @@ public class MainApplication {
 						break;
 					}
 					
-					possibleTrains.add(train);
+					isPossible = true;
 					break;
 				}
 				
+				if (!isPossible) {
+					continue;
+				}
+				
+				List<Seat> seats = train.getSeats();
+				
+				int possibleSeatCount = 0;				
+				for (Seat seat: seats) {
+					if (!seat.isSeatStatus()) possibleSeatCount++;
+				}
+				if (possibleSeatCount < dto.getNumberOfPeople()) {
+					continue;
+				}
+				
+				possibleTrains.add(train);
 			}		
 			
 			System.out.println(possibleTrains.toString());

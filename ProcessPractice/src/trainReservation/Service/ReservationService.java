@@ -19,7 +19,7 @@ public class ReservationService {
 	private static List<Train> trains = new ArrayList<Train>();
 	private static List<Cost> costs = new ArrayList<Cost>();	
 	
-	private static DateTimeFormatter timeformatter = DateTimeFormatter.ofPattern("HH:mm");
+	private static DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
 	
 	public ReservationService() {
 		initData();
@@ -39,24 +39,24 @@ public class ReservationService {
 				
 				if (!dto.isEqualDepartureStation(stopStationName)) 	continue;
 				
-				LocalTime stationDepartureTime = LocalTime.parse(dto.getDepartureTime(), timeformatter);
+				LocalTime stationDepartureTime = LocalTime.parse(dto.getDepartureTime(), timeFormatter);
 				
 				if (stationDepartureTime.isBefore(departureTime)) break;
 
-				sameStationIndex = stopStationIndex;  break;				
-			
+				sameStationIndex = stopStationIndex;  
+				break;				
+			}
 			if (sameStationIndex == -1) continue;
 			
 			boolean isPossible = false;
 			
 			
-			for (int stopStationIndex = 0; stopStationIndex < stopStations.size(); stopStationIndex++) {
-				
-				String stationName = stopStations.get(stopStationIndex).getStationName();
+			for (int stopStationIndex1 = 0; stopStationIndex1 < stopStations.size(); stopStationIndex1++) {
+					String stationName = stopStations.get(stopStationIndex1).getStationName();
 				
 				if (!dto.isEqualArrivalStation(stationName)) continue;
 				
-				if (stopStationIndex <= sameStationIndex) break;
+				if (stopStationIndex1 <= sameStationIndex) break;
 				
 				isPossible = true;
 				break;
@@ -65,17 +65,18 @@ public class ReservationService {
 			if (!isPossible) continue;
 			
 			List<Seat> seats = train.getSeats();
-			
 			int possibleSeatCount = 0;				
-			for (Seat seat: seats) {
-				if (!seat.isSeatStatus()) possibleSeatCount++;
-			}
+			
+			for (Seat seat: seats)  if (!seat.isSeatStatus()) possibleSeatCount++;
+			
 			if (possibleSeatCount < dto.getNumberOfPeople()) continue;
 
 			possibleTrains.add(train); 
+			
 			}
 			
 			return possibleTrains;
+			
 		}
 		
 			private static void initData() {
@@ -95,6 +96,7 @@ public class ReservationService {
 				costs.add(new Cost("대구역", "부산역", 10000));
 
 				Train train;
+				
 				List<Seat> seats = new ArrayList<>();
 				List<StopStation> stopStations = new ArrayList<>();
 				

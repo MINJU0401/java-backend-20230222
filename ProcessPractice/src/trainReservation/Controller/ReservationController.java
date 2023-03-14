@@ -15,7 +15,7 @@ import trainReservation.entity.Train;
 
 public class ReservationController {
 	
-	private DateTimeFormatter timeformatter = DateTimeFormatter.ofPattern("HH:mm");
+	private DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
 	
 	private ReservationService reservationService;
 	
@@ -25,7 +25,7 @@ public class ReservationController {
 	
 	public void reservation() {
 		while (true) {			
-			GetTrainListDto dto = new GetTrainListDto();		//	변수명에 get같은 동사형태가 오면 안됨	
+			GetTrainListDto dto = new GetTrainListDto();	
 			
 			LocalTime departureTime = null;
 			
@@ -37,7 +37,7 @@ public class ReservationController {
 			}	
 			
 			try {
-				departureTime = LocalTime.parse(dto.getDepartureTime(), timeformatter);
+				departureTime = LocalTime.parse(dto.getDepartureTime(), timeFormatter);
 			} 	catch (Exception exception) {
 				System.out.println("잘못된 시간입니다.");
 				continue;

@@ -22,6 +22,10 @@
     <fullyQualifiedTypeName name="trainReservation.entity.Seat"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="trainReservation.entity.StopStation"/>
-    <fullyQualifiedTypeName name="trainReservation.dto.GetTrainListDto"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="java.time.LocalTime"/>
+    <fullyQualifiedTypeName name="trainReservation.dto.GetTrainListDto"/>
+    <fullyQualifiedTypeName name="trainReservation.Controller.ReservationController"/>
+    <fullyQualifiedTypeName name="trainReservation.Service.ReservationService"/>
 </qualifiedTypeNameHistroy>

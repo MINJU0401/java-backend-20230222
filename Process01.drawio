@@ -1,1 +1,106 @@
-<mxfile host="app.diagrams.net" modified="2023-03-13T00:29:21.836Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" version="21.0.6" etag="TEqkbUMxAnnzbNyQK_nM" type="github"><diagram name="페이지-1" id="RF2ZQTDSKfN1Xpy7IFro">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-03-14T00:26:40.041Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="O_5Bmha8E54bp8UR1pib" version="21.0.6" type="github">
+  <diagram name="페이지-1" id="RF2ZQTDSKfN1Xpy7IFro">
+    <mxGraphModel dx="910" dy="476" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cRbMEcqVbHyRxsntm33S-1" value="&lt;h1&gt;기차 예약&lt;/h1&gt;&lt;p&gt;1. 출발역, 도착역, 출발시간, 인원을 입력하면 해당시간 이후의 열차 중에 출발역과 도착역을 거치는 열차를 반환&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;2. 해당 열차 중 좌석이 남아있는 열차를 선택하면 예약할 수 있음. 예약이 성공하면 예약 정보를 반환&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="30" width="340" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cRbMEcqVbHyRxsntm33S-2" target="cRbMEcqVbHyRxsntm33S-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-2" value="시작" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="250" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cRbMEcqVbHyRxsntm33S-3" target="cRbMEcqVbHyRxsntm33S-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-3" value="출발역, 도착역, 출발시간, 인원" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="340" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cRbMEcqVbHyRxsntm33S-5" target="cRbMEcqVbHyRxsntm33S-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;" edge="1" parent="1" source="cRbMEcqVbHyRxsntm33S-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="445" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cRbMEcqVbHyRxsntm33S-5" target="cRbMEcqVbHyRxsntm33S-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-5" value="모두 입력 ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="420" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="cRbMEcqVbHyRxsntm33S-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="220" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-8" value="&#39;모두 입력하세요&#39;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="415" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-13" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="420" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cRbMEcqVbHyRxsntm33S-15" target="cRbMEcqVbHyRxsntm33S-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cRbMEcqVbHyRxsntm33S-15" target="cRbMEcqVbHyRxsntm33S-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-15" value="올바른 시간 ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="327.5" y="510" width="185" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cRbMEcqVbHyRxsntm33S-17" target="cRbMEcqVbHyRxsntm33S-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="535" />
+              <mxPoint x="140" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-17" value="&#39;잘못된 시간입니다.&#39;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="505" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-20" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="510" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-21" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="406" y="464" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-22" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="406" y="555" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cRbMEcqVbHyRxsntm33S-24" target="cRbMEcqVbHyRxsntm33S-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-24" value="올바른 인원 ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="327.5" y="600" width="185" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="cRbMEcqVbHyRxsntm33S-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="140" y="625" />
+              <mxPoint x="140" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-25" value="&#39;잘못된 인원입니다.&#39;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="595" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-29" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="600" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cRbMEcqVbHyRxsntm33S-31" value="Index; index &amp;lt;&amp;nbsp;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="710" width="200" height="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

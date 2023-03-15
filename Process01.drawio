@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-15T00:46:18.005Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="c1wpAw825BJeRM2hMFhJ" version="21.0.6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-15T01:49:11.036Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="3s_PRA0YLAX88ml0J9mO" version="21.0.6" type="github">
   <diagram name="페이지-1" id="RF2ZQTDSKfN1Xpy7IFro">
-    <mxGraphModel dx="628" dy="328" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+    <mxGraphModel dx="910" dy="476" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -302,17 +302,17 @@
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KlIbFlZ1iCcrMXt9_DOa-5" target="KlIbFlZ1iCcrMXt9_DOa-32">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-5" value="&lt;font style=&quot;font-weight: normal; font-size: 9px;&quot;&gt;count; count &amp;lt; numberOfPeople; count++;&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;align=right;fontSize=9;" vertex="1" parent="1">
-          <mxGeometry x="920" y="400" width="440" height="280" as="geometry" />
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-5" value="&lt;font style=&quot;font-weight: normal; font-size: 9px;&quot;&gt;count; count &amp;lt; numberOfPeople; count++&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;align=right;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="960" y="400" width="360" height="280" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="KlIbFlZ1iCcrMXt9_DOa-5" source="KlIbFlZ1iCcrMXt9_DOa-8" target="KlIbFlZ1iCcrMXt9_DOa-15">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-8" value="좌석" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="KlIbFlZ1iCcrMXt9_DOa-5">
-          <mxGeometry x="160" y="40" width="120" height="40" as="geometry" />
+          <mxGeometry x="190" y="40" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-9" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;입력 받은 좌석을 &lt;br&gt;리스트에 저장&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="KlIbFlZ1iCcrMXt9_DOa-5">
-          <mxGeometry x="160" y="200" width="120" height="40" as="geometry" />
+          <mxGeometry x="190" y="200" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="KlIbFlZ1iCcrMXt9_DOa-5" source="KlIbFlZ1iCcrMXt9_DOa-15" target="KlIbFlZ1iCcrMXt9_DOa-9">
           <mxGeometry relative="1" as="geometry" />
@@ -321,20 +321,23 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-15" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;빈값이 아닌지 ?&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="KlIbFlZ1iCcrMXt9_DOa-5">
-          <mxGeometry x="160" y="120" width="120" height="40" as="geometry" />
+          <mxGeometry x="190" y="120" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="KlIbFlZ1iCcrMXt9_DOa-5" source="KlIbFlZ1iCcrMXt9_DOa-25" target="KlIbFlZ1iCcrMXt9_DOa-8">
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="KlIbFlZ1iCcrMXt9_DOa-5" source="KlIbFlZ1iCcrMXt9_DOa-25" target="KlIbFlZ1iCcrMXt9_DOa-8">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="80" y="60" />
+              <mxPoint x="100" y="60" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-25" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;좌석을 입력하세요&lt;/font&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;size=0.5;" vertex="1" parent="KlIbFlZ1iCcrMXt9_DOa-5">
-          <mxGeometry x="20" y="120" width="120" height="40" as="geometry" />
+          <mxGeometry x="40" y="120" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-30" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="KlIbFlZ1iCcrMXt9_DOa-5">
-          <mxGeometry x="128" y="118" width="60" height="30" as="geometry" />
+          <mxGeometry x="150" y="120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-85" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="KlIbFlZ1iCcrMXt9_DOa-5">
+          <mxGeometry x="230" y="151" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KlIbFlZ1iCcrMXt9_DOa-6" target="KlIbFlZ1iCcrMXt9_DOa-5">
           <mxGeometry relative="1" as="geometry" />
@@ -364,35 +367,35 @@
           <mxGeometry x="920" y="200" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-31" value="&lt;span style=&quot;font-size: 10px; font-weight: 400;&quot;&gt;index; index &amp;lt;trains.length; index++;&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;align=right;" vertex="1" parent="1">
-          <mxGeometry x="960" y="800" width="360" height="280" as="geometry" />
+          <mxGeometry x="1000" y="800" width="280" height="280" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="KlIbFlZ1iCcrMXt9_DOa-31" source="KlIbFlZ1iCcrMXt9_DOa-35" target="KlIbFlZ1iCcrMXt9_DOa-36">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-35" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;해당 인덱스의 &lt;br&gt;열차정보 가져오기&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="KlIbFlZ1iCcrMXt9_DOa-31">
-          <mxGeometry x="120" y="40" width="120" height="40" as="geometry" />
+          <mxGeometry x="80" y="40" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="KlIbFlZ1iCcrMXt9_DOa-31" source="KlIbFlZ1iCcrMXt9_DOa-36" target="KlIbFlZ1iCcrMXt9_DOa-37">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="KlIbFlZ1iCcrMXt9_DOa-31" source="KlIbFlZ1iCcrMXt9_DOa-36">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="80" y="40" as="targetPoint" />
+            <mxPoint x="40" y="40" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-36" value="&lt;p style=&quot;line-height: 100%; font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;입력한 열차번호와 요소의 열차번호가 같은지?&lt;/font&gt;&lt;/p&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="KlIbFlZ1iCcrMXt9_DOa-31">
-          <mxGeometry x="120" y="120" width="120" height="40" as="geometry" />
+          <mxGeometry x="80" y="120" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="KlIbFlZ1iCcrMXt9_DOa-31" source="KlIbFlZ1iCcrMXt9_DOa-37">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="180" y="320" as="targetPoint" />
+            <mxPoint x="140" y="320" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-37" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;존재하는 열차 변수에 &lt;br&gt;해당 요소 저장&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="KlIbFlZ1iCcrMXt9_DOa-31">
-          <mxGeometry x="120" y="200" width="120" height="40" as="geometry" />
+          <mxGeometry x="80" y="200" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-41" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="KlIbFlZ1iCcrMXt9_DOa-31">
-          <mxGeometry x="60" y="120" width="60" height="30" as="geometry" />
+          <mxGeometry x="20" y="120" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KlIbFlZ1iCcrMXt9_DOa-32" target="KlIbFlZ1iCcrMXt9_DOa-31">
           <mxGeometry relative="1" as="geometry" />
@@ -400,14 +403,18 @@
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-32" value="존재하는 열차 변수" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="1080" y="720" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="KlIbFlZ1iCcrMXt9_DOa-44">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="880" y="280" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="KlIbFlZ1iCcrMXt9_DOa-44">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1140.2758620689656" y="1200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="KlIbFlZ1iCcrMXt9_DOa-44">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1090" y="180.00000000000006" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="880" y="1140" />
+              <mxPoint x="880" y="180" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-44" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;열차 변수가 &lt;br&gt;null이 아닌지?&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -421,6 +428,9 @@
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-48" value="&lt;span style=&quot;font-size: 10px; font-weight: 400;&quot;&gt;count; count &amp;lt; existTrain.seats.length; count++;&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;align=right;" vertex="1" parent="1">
           <mxGeometry x="920" y="1280" width="440" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="KlIbFlZ1iCcrMXt9_DOa-48" source="KlIbFlZ1iCcrMXt9_DOa-49" target="KlIbFlZ1iCcrMXt9_DOa-50">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-49" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;해당 인덱스의 &lt;br&gt;좌석 정보 가져오기&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="KlIbFlZ1iCcrMXt9_DOa-48">
           <mxGeometry x="160" y="40" width="120" height="40" as="geometry" />
@@ -456,7 +466,7 @@
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="KlIbFlZ1iCcrMXt9_DOa-50" source="KlIbFlZ1iCcrMXt9_DOa-59">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="260" y="280" as="targetPoint" />
+            <mxPoint x="260" y="300" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-59" value="좌석 지정 상태 값 &lt;br&gt;false" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="KlIbFlZ1iCcrMXt9_DOa-50">
@@ -477,14 +487,62 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KlIbFlZ1iCcrMXt9_DOa-65" target="KlIbFlZ1iCcrMXt9_DOa-68">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KlIbFlZ1iCcrMXt9_DOa-65">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1140" y="1840" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="KlIbFlZ1iCcrMXt9_DOa-65" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;좌석이 정상 배정 됐는지?&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1080" y="1760" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-68" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-71" value="&lt;span style=&quot;font-size: 10px; font-weight: 400;&quot;&gt;index; index &amp;lt; costs.length; index++;&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;align=right;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1920" width="280" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="KlIbFlZ1iCcrMXt9_DOa-71" source="KlIbFlZ1iCcrMXt9_DOa-74" target="KlIbFlZ1iCcrMXt9_DOa-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="KlIbFlZ1iCcrMXt9_DOa-71" source="KlIbFlZ1iCcrMXt9_DOa-74">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="40" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="40" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-74" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;해당 요소의 출발역과 도착역이 지정한 출발역과 도착역과 같은지?&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="KlIbFlZ1iCcrMXt9_DOa-71">
+          <mxGeometry x="80" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-75" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;가격 변수에 해당 가격 &lt;br&gt;저장&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="KlIbFlZ1iCcrMXt9_DOa-71">
+          <mxGeometry x="80" y="120" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KlIbFlZ1iCcrMXt9_DOa-72" target="KlIbFlZ1iCcrMXt9_DOa-71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-72" value="가격 저장할 변수" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1080" y="1840" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KlIbFlZ1iCcrMXt9_DOa-79" target="KlIbFlZ1iCcrMXt9_DOa-80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-79" value="예약 번호 생성" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="2160" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KlIbFlZ1iCcrMXt9_DOa-75" target="KlIbFlZ1iCcrMXt9_DOa-79">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1140.2758620689656" y="2140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="KlIbFlZ1iCcrMXt9_DOa-80" target="KlIbFlZ1iCcrMXt9_DOa-81">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-80" value="예약 정보 객체 생성" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="2240" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-81" value="예약 정보 객체 출력" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="2320" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KlIbFlZ1iCcrMXt9_DOa-88" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="1760" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

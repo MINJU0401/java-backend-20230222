@@ -17,7 +17,7 @@ import trainReservation.entity.Train;
 
 public class ReservationController {
 	
-	private DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+	private static DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
 	
 	private ReservationService reservationService;
 	

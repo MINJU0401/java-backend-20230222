@@ -88,7 +88,6 @@ public class ReservationService {
 				
 				Train train = null;
 //				참조변수에서 값이 지정되지 않은 형태를 null 이라고 함. 기본타입 변수에는 null이 들어가지 않음.
-				
 				for (Train trainItem: trains) {
 					if (postReservationDto.isEqualTrainNumber(trainItem.getTrainNumber())) {
 						train = trainItem;
@@ -97,7 +96,6 @@ public class ReservationService {
 				}				
 				if (train == null) {
 					System.out.println("존재하지 않는 열차번호");
-
 					return null;
 				}
 				
@@ -105,28 +103,18 @@ public class ReservationService {
 				List<Seat> seats = train.getSeats();
 				List<String> inputSeatNumbers = postReservationDto.getSeats();
 				
-				for (int index = 0; index < seats.size(); index++) {
-					
-					Seat seat = seats.get(index);
-					
-					for (String seatNumber: postReservationDto.getSeats()) {
-						
-						if (!seat.getSeatNumber().equals(seatNumber)) {
-							continue;
-						}
-						
+				for (int index = 0; index < seats.size(); index++) {					
+					Seat seat = seats.get(index);					
+					for (String seatNumber: inputSeatNumbers) {						
+						if (!seat.getSeatNumber().equals(seatNumber)) continue;						
 						if (seat.isSeatStatus()) {
 							designationState = false;
 							break;
-						}
-						
+						}						
 						seat.setSeatStatus(true);
-						break;
-						
-					}
-					
-					if (!designationState) break;
-					
+						break;						
+					}					
+					if (!designationState) break;					
 				}
 								
 				if (!designationState) {
@@ -135,8 +123,7 @@ public class ReservationService {
 				}
 				
 				int totalCost = 0;				
-				for (Cost cost: costs) {
-					
+				for (Cost cost: costs) {					
 					boolean isEqualDepartureStation = 
 							getTrainListDto.isEqualDepartureStation(cost.getDepartureStation());
 					boolean isEqualArrivalStation = 
@@ -152,13 +139,12 @@ public class ReservationService {
 				
 				for (StopStation stopStation: train.getStopStations()) {
 					boolean isEqualDepartureStation = 
-							getTrainListDto.isEqualDepartureStation(stopStation.getStationName());
+								getTrainListDto.isEqualDepartureStation(stopStation.getStationName());
 					boolean isEqualArrivalStation =
-							getTrainListDto.isEqualArrivalStation(stopStation.getStationName());
+								getTrainListDto.isEqualArrivalStation(stopStation.getStationName());
 					
 					if (isEqualDepartureStation) departureTime = stopStation.getDepartureTime();
-					if (isEqualArrivalStation) arrivalTime = stopStation.getArrivalTime();
-					
+					if (isEqualArrivalStation) arrivalTime = stopStation.getArrivalTime();					
 				}
 				
 				ReservationInfo reservationInfo = new ReservationInfo(
@@ -169,7 +155,7 @@ public class ReservationService {
 						getTrainListDto.getArrivalStation(),
 						arrivalTime,
 						totalCost
-						);
+				);
 								
 				reservations.add(reservationInfo);
 				

@@ -16,13 +16,11 @@ import trainReservation.entity.Train;
 
 public class MainApplication {
 	
-	private static ReservationController reservationController = new ReservationController();
-	
+	private static ReservationController reservationController = 
+			new ReservationController();
 
-	public static void main(String[] args) {		
-		
+	public static void main(String[] args) {
 		reservationController.reservation();
-		
 			}
 		}
 	

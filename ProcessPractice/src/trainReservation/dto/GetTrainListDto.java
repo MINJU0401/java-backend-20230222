@@ -23,7 +23,7 @@ public class GetTrainListDto {
 		this.departureTime = scanner.nextLine();
 		System.out.print("인원 : ");
 		this.numberOfPeople = scanner.nextInt();
-	}		//	Constructor using field - all deselct 하고 만듬
+	}		//	Constructor using field - all deselect 하고 만듬
 
 	public GetTrainListDto(String departureStation, String arrivalStation, String departureTime, int numberOfPeople) {
 		this.departureStation = departureStation;

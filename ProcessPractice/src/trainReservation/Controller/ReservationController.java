@@ -7,7 +7,9 @@ import java.util.List;
 
 import trainReservation.Service.ReservationService;
 import trainReservation.dto.GetTrainListDto;
+import trainReservation.dto.PostReservationDto;
 import trainReservation.entity.Cost;
+import trainReservation.entity.ReservationInfo;
 import trainReservation.entity.Train;
 
 //	Controller class (계층)
@@ -25,37 +27,49 @@ public class ReservationController {
 	
 	public void reservation() {
 		while (true) {			
-			GetTrainListDto dto = new GetTrainListDto();	
+			GetTrainListDto getTrainListDto = new GetTrainListDto();	
 			
 			LocalTime departureTime = null;
 			
 			//	입력 검증
 			
-			if (dto.isEmpty()) {
+			if (getTrainListDto.isEmpty()) {
 				System.out.println("모두 입력하세요.");
 				continue;
 			}	
 			
 			try {
-				departureTime = LocalTime.parse(dto.getDepartureTime(), timeFormatter);
+				departureTime = LocalTime.parse(getTrainListDto.getDepartureTime(), timeFormatter);
 			} 	catch (Exception exception) {
 				System.out.println("잘못된 시간입니다.");
 				continue;
 			}
 			
-			if (dto.getNumberOfPeople() <= 0) {
+			if (getTrainListDto.getNumberOfPeople() <= 0) {
 				System.out.println("잘못된 인원입니다.");
 				continue;
 			}
 			
-			if (dto.isEqualStation()) {
+			if (getTrainListDto.isEqualStation()) {
 				System.out.println("출발역과 도착역이 같습니다.");
 				continue;
 			}
 			
-			List<Train> possibleTrains = reservationService.getPossibleTrainList(dto,departureTime);
+			List<Train> possibleTrains = reservationService.getPossibleTrainList(getTrainListDto, departureTime);
 		
 			System.out.println(possibleTrains.toString());
+			
+			
+			ReservationInfo reservationInfo = null;
+			while (true) {
+				
+				PostReservationDto postReservationDto = new PostReservationDto(getTrainListDto.getNumberOfPeople());
+				reservationInfo = reservationService.postReservation(postReservationDto, getTrainListDto);
+				if (reservationInfo == null) continue;
+				break;
+			}
+			
+			System.out.println(reservationInfo.toString());
 		}
 	}
 

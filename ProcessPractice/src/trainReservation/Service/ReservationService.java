@@ -6,7 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import trainReservation.dto.GetTrainListDto;
+import trainReservation.dto.PostReservationDto;
 import trainReservation.entity.Cost;
+import trainReservation.entity.ReservationInfo;
 import trainReservation.entity.Seat;
 import trainReservation.entity.StopStation;
 import trainReservation.entity.Train;
@@ -16,8 +18,9 @@ import trainReservation.entity.Train;
 
 public class ReservationService {
 	
-	private static List<Train> trains = new ArrayList<Train>();
-	private static List<Cost> costs = new ArrayList<Cost>();	
+	private static List<Train> trains = new ArrayList<>();
+	private static List<Cost> costs = new ArrayList<>();	
+	private static List<ReservationInfo> reservations = new ArrayList<>();
 	
 	private static DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
 	
@@ -34,29 +37,31 @@ public class ReservationService {
 			List<StopStation> stopStations = train.getStopStations();
 			int sameStationIndex = -1;
 			
-			for (int stopStationIndex = 0; stopStationIndex < stopStations.size(); stopStationIndex++) {					
-				String stopStationName = stopStations.get(stopStationIndex).getStationName();
+			for (int stopStationIndex = 0; stopStationIndex < stopStations.size(); stopStationIndex++) {	
+				StopStation stopStation = stopStations.get(stopStationIndex);
+				String stopStationName = stopStation.getStationName();
 				
 				if (!dto.isEqualDepartureStation(stopStationName)) 	continue;
 				
-				LocalTime stationDepartureTime = LocalTime.parse(dto.getDepartureTime(), timeFormatter);
+				LocalTime stationDepartureTime = LocalTime.parse(stopStation.getDepartureTime(), timeFormatter);
 				
 				if (stationDepartureTime.isBefore(departureTime)) break;
 
 				sameStationIndex = stopStationIndex;  
 				break;				
 			}
+			
 			if (sameStationIndex == -1) continue;
 			
 			boolean isPossible = false;
 			
 			
-			for (int stopStationIndex1 = 0; stopStationIndex1 < stopStations.size(); stopStationIndex1++) {
-					String stationName = stopStations.get(stopStationIndex1).getStationName();
+			for (int stopStationIndex = 0; stopStationIndex < stopStations.size(); stopStationIndex++) {
+					String stationName = stopStations.get(stopStationIndex).getStationName();
 				
 				if (!dto.isEqualArrivalStation(stationName)) continue;
 				
-				if (stopStationIndex1 <= sameStationIndex) break;
+				if (stopStationIndex <= sameStationIndex) break;
 				
 				isPossible = true;
 				break;
@@ -78,6 +83,98 @@ public class ReservationService {
 			return possibleTrains;
 			
 		}
+	
+			public ReservationInfo postReservation(PostReservationDto postReservationDto, GetTrainListDto getTrainListDto) {
+				
+				Train train = null;
+//				참조변수에서 값이 지정되지 않은 형태를 null 이라고 함. 기본타입 변수에는 null이 들어가지 않음.
+				
+				for (Train trainItem: trains) {
+					if (postReservationDto.isEqualTrainNumber(trainItem.getTrainNumber())) {
+						train = trainItem;
+						break;
+				}
+				}				
+				if (train == null) {
+					System.out.println("존재하지 않는 열차번호");
+
+					return null;
+				}
+				
+				boolean designationState = true;
+				List<Seat> seats = train.getSeats();
+				List<String> inputSeatNumbers = postReservationDto.getSeats();
+				
+				for (int index = 0; index < seats.size(); index++) {
+					
+					Seat seat = seats.get(index);
+					
+					for (String seatNumber: postReservationDto.getSeats()) {
+						
+						if (!seat.getSeatNumber().equals(seatNumber)) {
+							continue;
+						}
+						
+						if (seat.isSeatStatus()) {
+							designationState = false;
+							break;
+						}
+						
+						seat.setSeatStatus(true);
+						break;
+						
+					}
+					
+					if (!designationState) break;
+					
+				}
+								
+				if (!designationState) {
+					System.out.println("좌석 배정에 실패하였습니다.");
+					return null;
+				}
+				
+				int totalCost = 0;				
+				for (Cost cost: costs) {
+					
+					boolean isEqualDepartureStation = 
+							getTrainListDto.isEqualDepartureStation(cost.getDepartureStation());
+					boolean isEqualArrivalStation = 
+							getTrainListDto.isEqualArrivalStation(cost.getArrivalStation());
+					
+					if (!isEqualDepartureStation || !isEqualArrivalStation) continue;
+					totalCost = cost.getAmount() * getTrainListDto.getNumberOfPeople();
+					break;
+				}
+				
+				String departureTime = "";
+				String arrivalTime = "";
+				
+				for (StopStation stopStation: train.getStopStations()) {
+					boolean isEqualDepartureStation = 
+							getTrainListDto.isEqualDepartureStation(stopStation.getStationName());
+					boolean isEqualArrivalStation =
+							getTrainListDto.isEqualArrivalStation(stopStation.getStationName());
+					
+					if (isEqualDepartureStation) departureTime = stopStation.getDepartureTime();
+					if (isEqualArrivalStation) arrivalTime = stopStation.getArrivalTime();
+					
+				}
+				
+				ReservationInfo reservationInfo = new ReservationInfo(
+						postReservationDto.getTrainNumber(),
+						postReservationDto.getSeats(),
+						getTrainListDto.getDepartureStation(),
+						departureTime,
+						getTrainListDto.getArrivalStation(),
+						arrivalTime,
+						totalCost
+						);
+								
+				reservations.add(reservationInfo);
+				
+				return reservationInfo;
+			}
 		
 			private static void initData() {
 				

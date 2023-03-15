@@ -28,8 +28,7 @@ public class StopStation {
 
 	@Override
 	public String toString() {
-		return "StopStation [stationName=" + stationName + ", departureTime=" + departureTime + ", arrivalTime="
-				+ arrivalTime + "]";
+		return "StopStation [stationName=" + stationName + ", departureTime=" + departureTime + ", arrivalTime=" + arrivalTime + "]";
 	}
 	
 	

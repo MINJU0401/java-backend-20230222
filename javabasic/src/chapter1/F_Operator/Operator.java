@@ -81,6 +81,8 @@ public class Operator {
 		int number3 = 3;
 		int sampleNumber = number2 / --number3;  
 		
+		System.out.println(sampleNumber);
+		
 		
 		System.out.println("-----대입 연산자-----");
 		//	대입 연산자

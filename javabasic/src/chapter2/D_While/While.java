@@ -33,6 +33,7 @@ public class While {
 //		do - while
 //		반복 실행할 코드를 무조건 한번 실행한 후에 조건을 검사하는 반복문
 //		사용방법 : do { 실행할 코드 } while (조건);
+
 		do {
 			System.out.println(number);
 			number++;
@@ -40,4 +41,6 @@ public class While {
 		System.out.println(number);
 	}
 
+	
+	
 }

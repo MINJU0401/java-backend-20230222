@@ -28,7 +28,6 @@
     <fullyQualifiedTypeName name="trainReservation.dto.PostReservationDto"/>
     <fullyQualifiedTypeName name="trainReservation.entity.ReservationInfo"/>
     <fullyQualifiedTypeName name="trainReservation.dto.GetReservationDto"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="board.controller.UserController"/>
     <fullyQualifiedTypeName name="board.service.UserService"/>
     <fullyQualifiedTypeName name="board.dto.request.user.SignUpDto"/>
@@ -43,7 +42,6 @@
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="board.repository.UserRepository"/>
-    <fullyQualifiedTypeName name="board.common.constant.ResponseMessage"/>
     <fullyQualifiedTypeName name="board.entity.User"/>
     <fullyQualifiedTypeName name="board.dto.response.board.PostBoardResponseDto"/>
     <fullyQualifiedTypeName name="board.repository.BoardRepository"/>
@@ -52,6 +50,11 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="board.entity.Comment"/>
     <fullyQualifiedTypeName name="board.entity.Like"/>
-    <fullyQualifiedTypeName name="board.entity.Board"/>
     <fullyQualifiedTypeName name="board.dto.response.board.GetBoardResponseDto"/>
+    <fullyQualifiedTypeName name="board.entity.Board"/>
+    <fullyQualifiedTypeName name="board.dto.response.board.PatchBoardResponseDto"/>
+    <fullyQualifiedTypeName name="board.common.constant.ResponseMessage"/>
+    <fullyQualifiedTypeName name="board.dto.request.board.PatchBoardDto"/>
+    <fullyQualifiedTypeName name="board.dto.response.board.DeleteBoardResponseDto"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

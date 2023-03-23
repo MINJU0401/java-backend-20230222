@@ -31,7 +31,6 @@
     <fullyQualifiedTypeName name="board.controller.UserController"/>
     <fullyQualifiedTypeName name="board.service.UserService"/>
     <fullyQualifiedTypeName name="board.dto.request.user.SignUpDto"/>
-    <fullyQualifiedTypeName name="java.util.UUID"/>
     <fullyQualifiedTypeName name="board.dto.response.user.SignInResponseDto"/>
     <fullyQualifiedTypeName name="board.dto.request.user.SignInDto"/>
     <fullyQualifiedTypeName name="board.controller.BoardController"/>
@@ -45,9 +44,7 @@
     <fullyQualifiedTypeName name="board.entity.User"/>
     <fullyQualifiedTypeName name="board.dto.response.board.PostBoardResponseDto"/>
     <fullyQualifiedTypeName name="board.repository.BoardRepository"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="board.dto.response.board.GetBoardListResponseDto"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="board.entity.Comment"/>
     <fullyQualifiedTypeName name="board.entity.Like"/>
     <fullyQualifiedTypeName name="board.dto.response.board.GetBoardResponseDto"/>
@@ -56,5 +53,9 @@
     <fullyQualifiedTypeName name="board.common.constant.ResponseMessage"/>
     <fullyQualifiedTypeName name="board.dto.request.board.PatchBoardDto"/>
     <fullyQualifiedTypeName name="board.dto.response.board.DeleteBoardResponseDto"/>
+    <fullyQualifiedTypeName name="java.util.UUID"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

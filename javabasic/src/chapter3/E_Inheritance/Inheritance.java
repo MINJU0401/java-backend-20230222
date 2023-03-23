@@ -59,7 +59,7 @@ public class Inheritance {
 		developer1.eat("사과");
 		developer1.develope();
 		
-		Developer developer2 = new Developer("Michel", 29, "Front end", "javascript");
+		Developer developer2 = new Developer("Michael", 29, "Front end", "javascript");
 		developer2.eat("바나나");
 		developer2.develope();
 

@@ -7,6 +7,8 @@ class User {
     String email;
 
     String password;
+    
+    String passwordCheck;	//	정답엔 String passwordCheck없음
 
     String name;
 
@@ -17,7 +19,7 @@ class User {
 public class MainApplication2 {
 	
 	
-	    List<User> userList = new ArrayList<>();
+	    static List<User> userList = new ArrayList<>();  // 정답엔 static 없었음
 
 	    public static void main(String[] args) {
 

@@ -178,10 +178,15 @@ WHERE email LIKE '%@gmail%';
 -- NOT NULL
 -- 입력 혹은 수정 작업에 있어서 해당 필드에 Null 이 올 수 없도록 하는 제약 조건 
 
--- Alter 
--- Alter로 NOT NULL 제약 조건을 추가할 때는 원래 존재하는 레코드에서 해당 필드의 데이터가 Null이 존재하면 안됨 
+-- Create
 CREATE TABLE NotnullTable1 ( 
 	notnull_field INT NOT NULL
+);
+
+-- Alter 
+-- Alter로 NOT NULL 제약 조건을 추가할 때는 원래 존재하는 레코드에서 해당 필드의 데이터가 Null이 존재하면 안됨 
+CREATE TABLE NotnullTable ( 
+	notnull_field INT
 );
 
 ALTER TABLE NotnullTable1 

@@ -37,9 +37,9 @@ arrival_time TIME NOT NULL
 
 CREATE TABLE SEAT (			              -- 복합 PRIMARY KEY ?
 	seat_code VARCHAR(5) PRIMARY KEY,     -- train에 종속되게 만들어도 될 것 같음
-	type VARCHAR(10),                     -- 일반실 특실
-    seat_number VARCHAR(2),
-    train_type VARCHAR(10)
+	type VARCHAR(10) NOT NULL,                     -- 일반실 특실
+    seat_number VARCHAR(2) NOT NULL,
+    train_type VARCHAR(10) NOT NULL
 );
 
 ALTER TABLE Cost 

@@ -88,3 +88,17 @@ AND (18세이상인구수 <= 12000 OR 반 >= 100);
 SELECT * FROM namgu 
 WHERE 인구수 >= 10000 AND 18세이상인구수 <= 12000 OR 반 >= 100;  -- 괄호를 없애면 출력데이터가 달라짐 AND OR 연산자 사용시 주의
 
+SELECT count(면적), max(세대수), min(세대수)
+FROM namgu;
+
+SELECT 면적, count(면적), max(세대수), min(세대수)
+FROM namgu
+GROUP BY 면적;
+
+-- Group By 되지 않은 필드는 Having에 사용 불가능 
+SELECT 면적, count(면적), max(세대수), min(세대수)
+FROM namgu 
+GROUP BY 면적				-- group by로 먼저 면적에 따라 그룹화 한 다음
+HAVING 세대수 >= 5000	        -- 세대수가 5000이상 되는 조건에 부합하는 데이터를  
+ORDER BY 면적;				-- 정렬하여 테이블 출력
+

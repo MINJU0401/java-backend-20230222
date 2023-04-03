@@ -456,3 +456,29 @@ ON namgu (세대수);
 ALTER TABLE namgu
 DROP INDEX sadaesu_uinique_index;  -- 이름 잘못 설정해서 삭제함
 
+
+-- DCL
+-- 권한 제어 및 트랜잭션 제어를 담당하는 쿼리문의 집합
+
+-- 사용자 권한
+CREATE USER 'Developer_user'@'%' IDENTIFIED BY 'fangnori';
+
+-- GRANT 
+-- 사용자에게 권한을 부여하는 쿼리문
+-- GRANT 권한1, ... ON 데이터베이스.테이블 TO 사용자이름@호스트;
+GRANT CREATE, INSERT, UPDATE, SELECT, DELETE
+ON hotel.* TO 'Developer_user'@'%';   -- 해당 사용자에 hotel 데이터베이스에 있는 모든 테이블과 상기 작업에 대한 권한을 부여함
+
+-- REVOKE
+-- 사용자로부터 권한을 회수하는 쿼리문 
+-- REVOKE 권한1, ... ON 데이터베이스.테이블 FROM 사용자이름@호스트;
+REVOKE CREATE ON hotel.* FROM 'Developer_user'@'%';
+
+-- COMMIT
+-- 트랜잭션을 영구적으로 반영하는 쿼리문;
+COMMIT;
+
+-- ROLLBACK
+-- 트랜잭션을 취소하고 되돌려놓는 쿼리문
+ROLLBACK;
+

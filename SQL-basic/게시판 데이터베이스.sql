@@ -27,15 +27,16 @@ FROM Board B, User U, (
 	FROM Board B
 	LEFT JOIN LIKEY L
 	ON B.board_number = L.board_number
-	GROUP BY board_number) LC, (
+	GROUP BY board_number
+    ) LC, 
+    (
 	SELECT B.board_number AS board_number, count(C.user_email) AS comment_count
 	FROM Board B
 	LEFT JOIN Comment C
 	ON B.board_number = C.board_number
-	WHERE B.board_number = 1
-	GROUP BY board_number) CC
-WHERE B.board_number = 1
-AND B.writer_email = U.email
+	GROUP BY board_number
+    ) CC
+WHERE B.writer_email = U.email
 AND B.board_number = LC.board_number
 AND B.board_number = CC.board_number;
 
@@ -49,7 +50,7 @@ FROM Comment C, User U
 WHERE C.user_email = U.email
 AND C.board_number = 1;
 
-CREATE VIEW Board_View
+CREATE VIEW Board_View AS
 SELECT 
 	B.board_number AS board_number,
     B.title AS title,
@@ -62,10 +63,19 @@ SELECT
     LC.like_count AS like_count,
     CC.comment_count AS comment_count
 FROM Board B, User U, (
-	SELECT Board B
-	LEFT JOIN Comment C
-	ON B.board_number = C.board_number
-	GROUP BY board_number) CC
+	SELECT B.board_number AS board_number, count(L.user_email) AS like_count
+	FROM Board B
+	LEFT JOIN LIKEY L
+	ON B.board_number = L.board_number
+	GROUP BY board_number
+) LC,
+(
+SELECT B.board_number AS board_number, count(C.user_email) AS comment_count
+FROM Board B
+LEFT JOIN Comment C 
+ON B.board_number = C.board_number
+GROUP BY board_number
+) CC
 WHERE B.writer_email = U.email
 AND B.board_number = LC.board_number
 AND B.board_number = CC.board_number;
@@ -77,13 +87,13 @@ WHERE board_number = 1;
 SELECT * FROM Board_View
 ORDER BY write_datetime DESC;
 
--- 주간 TOP3
+-- 주간 TOP3 리스트 
 SELECT * FROM Board_View
 WHERE write_datetime >= '2023-03-27'
 ORDER BY like_count DESC
 LIMIT 3;
 
--- 검색어 
+-- 검색어 리스트 
 SELECT * FROM Board_View 
 WHERE title LIKE '%Title%'
 OR content LIKE '%Title%';

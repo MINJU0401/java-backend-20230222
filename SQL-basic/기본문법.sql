@@ -458,6 +458,7 @@ DROP INDEX sadaesu_uinique_index;  -- 이름 잘못 설정해서 삭제함
 
 
 -- DCL
+-- Data Control Language
 -- 권한 제어 및 트랜잭션 제어를 담당하는 쿼리문의 집합
 
 -- 사용자 권한

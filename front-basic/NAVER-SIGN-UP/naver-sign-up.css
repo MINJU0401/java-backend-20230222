@@ -14,16 +14,30 @@ body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select
 body,button,input,select,table,textarea {
     font-family: Dotum,'돋움',Helvetica,sans-serif;
     font-size: 12px;
-    -webkit-text-size-adjust: none
+    -webkit-text-size-adjust: none;
 }
 
 html {
-    font-size: 12px
+    font-size: 12px;
+}
+
+div {
+    display: block;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
 }
 
 body,html {
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
 button,input,select,textarea {
@@ -36,7 +50,7 @@ button,input,select,textarea {
     outline: 0;
     text-decoration: none;
     cursor: pointer;
-    -webkit-text-size-adjust: none
+    -webkit-text-size-adjust: none;
 }
 
 button {
@@ -61,7 +75,13 @@ address,em {
 
 a {
     text-decoration: none;
-    cursor: pointer
+    cursor: pointer;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 a:active,a:focus,a:hover {
@@ -99,6 +119,15 @@ hr {
     background-image: url(https://ssl.pstatic.net/static/nid/join/m-sp-00-common-f1c49532.png);
     background-size: 44px 39px;
     background-repeat: no-repeat
+}
+
+@media (max-width: 768px) {
+#header .h_logo {
+    width: 165px;
+    height: 32px;
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_logo_naver.png);
+    background-size: 165px auto;
+}
 }
 
 .blind {
@@ -146,6 +175,12 @@ select {
     border-radius: 0px;
 }
 
+form {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+}
+
 #u-skip {
     position: relative;
     z-index: 2147483647
@@ -186,7 +221,7 @@ div[tabindex='-1'] {
     clear: both;
     margin: 0 auto;
     padding: 30px 0 15px 0;
-    text-align: center
+    text-align: center;
 }
 
 #footer * {
@@ -196,7 +231,10 @@ div[tabindex='-1'] {
     margin: 0;
     padding: 0;
     list-style: none;
-    color: #333
+    list-style-position: initial;
+    list-style-image: initial;
+    list-style-type: none;
+    color: #333;
 }
 
 #footer a {
@@ -224,7 +262,17 @@ div[tabindex='-1'] {
     padding: 0 3px 0 7px;
     white-space: nowrap;
     background: url(https://static.nid.naver.com/images/join/pc/bu-bar-2x.gif) left 50% no-repeat;
-    background-size: 1px 10px
+    background-image: url(https://static.nid.naver.com/images/join/pc/bu_bar_2x.gif);
+    background-position-x: left;
+    background-position-y: 50%;
+    background-size: initial;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    background-size: 1px 10px;
 }
 
 #footer ul li:first-child {
@@ -268,11 +316,11 @@ div[tabindex='-1'] {
 
 #footer address a {
     font: bold 9px Verdana;
-    color: #333
+    color: #333;
 }
 
 #footer address a:hover {
-    color: #2db400
+    color: #2db400;
 }
 
 #footer address span {
@@ -290,7 +338,7 @@ div[tabindex='-1'] {
     display: inline-block;
     width: 63px;
     height: 12px;
-    background: url(https://static.nid.naver.com/images/ui/login/pc-sp-login-190522.png) no-repeat;
+    background: url(https://static.nid.naver.com/images/ui/login/pc_sp_login_190522.png) no-repeat;
     background-position: -242px 0;
     background-size: 460px auto;
     *top: 1px
@@ -427,6 +475,10 @@ select::-ms-expand {
 
 #container,#footer,#header {
     margin: 0 auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
     max-width: 768px;
     min-width: 460px
 }
@@ -662,7 +714,7 @@ html[lang=en] .section,html[lang=zh-Hans] .section,html[lang=zh-Hant] .section {
 .input-chk {
     position: relative;
     display: block;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 .input-chk input {
@@ -672,7 +724,7 @@ html[lang=en] .section,html[lang=zh-Hans] .section,html[lang=zh-Hant] .section {
     width: 18px;
     height: 18px;
     margin-top: -10px;
-    outline: 0
+    outline: 0;
 }
 
 .input-chk label {
@@ -693,11 +745,11 @@ html[lang=en] .section,html[lang=zh-Hans] .section,html[lang=zh-Hant] .section {
 }
 
 .input-chk input:focus~label {
-    outline: dotted thin
+    outline: dotted thin;
 }
 
 html[lang=en] .input-chk label,html[lang=zh-Hans] .input-chk label,html[lang=zh-Hant] .input-chk label {
-    font-family: Arial
+    font-family: Arial;
 }
 
 :root .input-chk label:before {
@@ -1246,7 +1298,7 @@ html[lang=en] .group-join {
     *position: absolute;
     *top: 0;
     *left: 0;
-    apperance: none;
+    appearance: none;
     -webkit-apperance: none
 }
 
@@ -1276,7 +1328,7 @@ html[lang=en] .group-join {
 .join-title {
     margin: 19px 0 8px;
     font-size: 14px;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .ps-box,.ps-box-disable {
@@ -1370,7 +1422,7 @@ html[lang=en] .group-join {
     margin-top: -12px;
     background-image: url(https://static.nid.naver.com/images/ui/join/m_icon_pw_step.png);
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: -27px 0;
     background-size: 125px 75px;
     cursor: pointer;
 }

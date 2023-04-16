@@ -46,3 +46,12 @@ interface Object4 {
     prop4: number;
 }                                           /* typescript에서는 타입을 서로 합칠 수 있음 */
 const object4: Object3 & Object4 = { prop1: 'prop1', prop2: 2, prop3: 'prop3', prop4: 1 }
+
+//* 4. enum(열거형) //
+enum Fruits {
+    APPLE = '사과'
+    BANANA = '바나나',
+    MELON = '멜론'
+}
+const fruit: Fruits = Fruits.APPLE;
+console.log(fruit);

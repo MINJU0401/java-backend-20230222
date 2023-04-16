@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="./naver-sign-in.css" />
     <script>
         const onSubmitHandler = () => {
-        const form = document.getElementById('form');
-        const id = document.getElementById('id').value;     /* 해당 id에 해당하는 요소를 가져올 수 있음 */
-        if(!id.trim()) {
-            document.getElementById('sign-in-error').style.display = 'block';
-            return;
+            const form = document.getElementById('form');
+            const id = document.getElementById('id').value;     /* 해당 id에 해당하는 요소를 가져올 수 있음 */
+            if(!id.trim()) {
+                document.getElementById('sign-in-error').style.display = 'block';
+                return;
+            }   
+            document.getElementById('sign-in-error').style.display = 'none';
+            form.submit();
         }
-        document.getElementById('sign-in-error').style.display = 'none';
-        form.submit();
-    }
     </script>
 </head>
 <body>
     <!--# Header -->
     <div class="header">
         <div class="header-inner">
-            <a href="http://naver.com" class="logo">
+            <a href="https://naver.com" class="logo">
                 <h1 class="blind">NAVER</h1>
             </a>
             <div class="lang">
@@ -65,16 +65,16 @@
                             <!--* Sign In Keep wrapper -->
                             <div class="sign-in-keep-wrapper">
                                     <div class="keep-check">
-                                        <input type="checkbox" class="input-keep" value="off" />
-                                        <label for="keep" class="keep-text">
+                                        <input type="checkbox" class="input-keep" value="off"/>
+                                        <label class="keep-text">
                                             로그인 상태 유지
                                         </label>
                                     </div>
                                     <div class="ip-check"></div>
                             </div> 
                             <!--* Sign In Error -->
-                            <div class="sign-in-error">
-                                <div id="sign-in-error" class="error-message" style="display: none;">
+                            <div id="sign-in-error" class="sign-in-error" style="display: none;">
+                                <div class="error-message" >
                                     <strong>아이디</strong>를 입력하세요.
                                 </div>
                             </div>
@@ -98,7 +98,7 @@
                     <a class="find-text" href="https://nid.naver.com/user2/api/route?m=routeIdInquiry&amp;lang=ko_KR">아이디 찾기</a>
                 </li>
                 <li>
-                    <a class="find-text" href="#">회원가입</a>
+                    <a class="find-text" href="https://nid.naver.com/user2/V2Join?m=agree&lang=ko_KR">회원가입</a>
                 </li>
             </ul>
             <!--* 광고 배너 -->
@@ -123,10 +123,10 @@
                     <span class="footer-logo">
                         <span class="blind">네이버</span>
                     </span>
-                    </a>S
-                    <span class="text">Copyright</span>
-                    <span class="corp">@ NAVER Corp.</span>
-                    <span class="text">ALL Rights Reserved.</span></a>
+                </a>
+                <span class="text">Copyright</span>
+                <span class="corp">@ NAVER Corp.</span>
+                <span class="text">ALL Rights Reserved.</span></a>
             </div>
         </div>
     </div>

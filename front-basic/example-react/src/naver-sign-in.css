@@ -73,6 +73,11 @@ a {
     cursor: pointer;  /* 커서를 손가락 모양으로 */
     z-index: 1;
 }
+.wrap {
+    position: relative;
+    height: 100%;
+    letter-spacing: -.5px;
+}
 .sign-in-wrapper {
     width: 460px;
     margin: 0 auto;
@@ -270,6 +275,11 @@ a {
     line-height: 15px;
     letter-spacing: -0.5px;
     color: #888;
+}
+.corp {
+    padding: 0 2px;
+    font-weight: 500;
+    color: #000;
 }
 .footer-link li+li {
     position: relative;

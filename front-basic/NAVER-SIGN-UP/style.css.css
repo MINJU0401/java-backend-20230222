@@ -5,7 +5,7 @@ option {
     min-height: 1.2em;
     padding: 0px 2px 1px;
 }
-body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select,table,td,textarea,th,ul {
+body,button,dd,dl,dt,fieldset,form,h1,h2,h3,input,li,ol,p,select,table,td,textarea,th,ul {
     margin: 0;
     padding: 0;
     -webkit-text-size-adjust: none
@@ -144,10 +144,6 @@ body {
     background: #f5f6f7
 }
 
-html[lang=en] body,html[lang=en] button,html[lang=en] input,html[lang=en] select,html[lang=en] table,html[lang=en] textarea,html[lang=zh-Hans] body,html[lang=zh-Hans] button,html[lang=zh-Hans] input,html[lang=zh-Hans] select,html[lang=zh-Hans] table,html[lang=zh-Hans] textarea,html[lang=zh-Hant] body,html[lang=zh-Hant] button,html[lang=zh-Hant] input,html[lang=zh-Hant] select,html[lang=zh-Hant] table,html[lang=zh-Hant] textarea {
-    font-family: Arial
-}
-
 select {
     writing-mode: horizontal-tb !important;
     text-rendering: auto;
@@ -175,11 +171,11 @@ select {
     border-radius: 0px;
 }
 
-form {
+/* form {
     margin: 0;
     padding: 0;
     -webkit-text-size-adjust: none;
-}
+} */
 
 #u-skip {
     position: relative;
@@ -454,6 +450,10 @@ select::-ms-expand {
     opacity: 0
 }
 
+script {
+    display: none;
+}
+
 .sp {
     background: url(https://static.nid.naver.com/images/ui/join/pc-sp-join-20170904.png) no-repeat
 }
@@ -499,7 +499,7 @@ select::-ms-expand {
     margin: 0 auto;
     width: 240px;
     height: 44px;
-    background-image: url(https://ssl.pstatic.net/static/nid/join/m_logo_naver.png);
+    background-image: url(https://static.nid.naver.com/images/ui/join/m_naver_logo_20191126.png);
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 240px auto;
@@ -606,7 +606,7 @@ select::-ms-expand {
     margin: 0 auto
 }
 
-.error {
+.sign-up-error {
     display: block;
     margin: 8px 0 -1px;
     font-size: 12px;
@@ -614,71 +614,12 @@ select::-ms-expand {
     color: red
 }
 
-.error-next-box {
+.error-message {
     display: block;
     margin: 9px 0 -2px;
     font-size: 12px;
     line-height: 14px;
     color: red
-}
-
-.terms-p2 {
-    font-size: 12px;
-    line-height: 15px;
-    margin-top: -11px;
-    padding: 0 0 27px;
-    color: #8e8e8e
-}
-
-.terms-bx-list {
-    margin-top: 4px
-}
-
-.terms-bx {
-    display: block;
-    padding-top: 30px
-}
-
-.terms-box {
-    position: relative;
-    overflow: auto;
-    height: 88px;
-    margin-top: 8px;
-    padding: 12px;
-    border: 1px solid #dadada;
-    background: #fff;
-    box-sizing: border-box;
-    scrollbar-base-color:#d9d9d9;scrollbar-arrow-color:#8e8e8e;scrollbar-3dlight-color: #d9d9d9;
-    scrollbar-darkshadow-color: #d9d9d9;
-    scrollbar-face-color:#d9d9d9;scrollbar-highlight-color:#d9d9d9;scrollbar-shadow-color:#d9d9d9;scrollbar-track-color:#f2f2f2;-webkit-overflow-scrolling: touch
-}
-
-.terms-box .article {
-    font-size: 12px;
-    line-height: 16px;
-    color: #666
-}
-
-.t .terms-box::-webkit-scrollbar {
-    overflow: visible;
-    width: 6px;
-    margin-right: 10px;
-    background: 0 0
-}
-
-.t .terms-box::-webkit-scrollbar-thumb {
-    min-height: 20px;
-    margin: 0 5px 0 0;
-    -webkit-border-radius: 5px;
-    background-color: rgba(45,70,97,.3)
-}
-
-.t .terms-box::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(45,70,97,.3)
-}
-
-.t .terms-box::-webkit-scrollbar-corner {
-    background: 0 0
 }
 
 .section {
@@ -2441,23 +2382,6 @@ html[lang=en] .btn-global,html[lang=zh-Hans] .btn-global,html[lang=zh-Hant] .btn
     }
 }
 
-@media (max-width: 414px) {
-    .kid-img-area .img01 {
-        height:267px
-    }
-
-    .kid-img-area .img02 {
-        height: 192px
-    }
-
-    .kid-img-area .img03 {
-        height: 267px
-    }
-
-    .classroom-img .img04 {
-        height: 230px
-    }
-}
 
 @media (max-width: 375px) {
     .terms-chk-all .chk-all-txt .m-br {
@@ -2484,22 +2408,6 @@ html[lang=en] .btn-global,html[lang=zh-Hans] .btn-global,html[lang=zh-Hant] .btn
         padding-right: 0
     }
 
-    .kid-img-area .img01 {
-        height: 240px
-    }
-
-    .kid-img-area .img02 {
-        height: 173px
-    }
-
-    .kid-img-area .img03 {
-        height: 240px
-    }
-
-    .classroom-img .img04 {
-        height: 207px
-    }
-}
 
 @media (min-width: 375px) {
     .easy-btn {
@@ -2508,62 +2416,15 @@ html[lang=en] .btn-global,html[lang=zh-Hans] .btn-global,html[lang=zh-Hant] .btn
     }
 }
 
-@media (max-width: 360px) {
-    .kid-img-area .img01 {
-        height:230px
-    }
-
-    .kid-img-area .img02 {
-        height: 165px
-    }
-
-    .kid-img-area .img03 {
-        height: 230px
-    }
-
-    .classroom-img .img04 {
-        height: 198px
-    }
-}
-
 @media (max-width: 320px) {
     .input-chk .collect-personal {
         margin-bottom:-3px
     }
 
-    #wrap.pop-easy .collect-personal-area {
-        padding: 0 15px 34px
-    }
-
-    .kid-img-area .img01 {
-        height: 202px;
-        background-image: url(https://static.nid.naver.com/images/ui/join/m-kid-person-01.png)
-    }
-
-    .kid-img-area .img02 {
-        height: 145px;
-        background-image: url(https://static.nid.naver.com/images/ui/join/m-kid-person-02.png)
-    }
-
-    .kid-img-area .img03 {
-        height: 202px;
-        background-image: url(https://static.nid.naver.com/images/ui/join/m-kid-person-03.png)
-    }
-
-    .classroom-img .img04 {
-        height: 202px;
-        background-image: url(https://static.nid.naver.com/images/ui/join/m-kid-person-04.png)
-    }
-
-    .banner-certify {
-        width: 290px;
-        height: 93px
-    }
-}
 
 @media (max-width: 250px) {
     .banner-certify {
         width:220px;
-        height: 70px
+        height: 70px;
     }
 }

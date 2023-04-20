@@ -8,36 +8,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>네이버 : 회원가입</title>
     <link rel="stylesheet" href="./naver-sign-up.css">
-    <meta name="decorator" content="V2-JOIN">
+    <meta name="decorator" content="V2-JOIN">  
+
 </head>
-
 <body>
-    <div id="wrap">
-
-        <!-- 스킵네비게이션 : 웹접근성대응-->
-        <div id="u-skip">
-            <a href="#content"
-                onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false;"><span>본문으로
-                    바로가기</span></a>
-        </div>
-        <!-- //스킵네비게이션 -->
         <!-- header -->
         <div id="header" class="join-membership" role="banner">
             <h1><a href="http://www.naver.com" class="h-logo"><span class="blind">NAVER</span></a></h1>
         </div>
         <!-- // header -->
-
-        <form id="join-form" method="post" action="/user2/V2Join?m=end">
-            <input type="hidden" id="token-sjoin" name="token-sjoin" value="UZr3b63QTIkJxzV2">
-            <input type="hidden" id="encPswd" name="encPswd" value="">
-            <input type="hidden" id="encKey" name="encKey" value="">
-            <input type="hidden" id="birthday" name="birthday" value="">
-            <input type="hidden" id="joinMode" name="joinMode" value="unreal">
-            <input type="hidden" id="pbirthday" name="pbirthday" value="">
-            <input type="hidden" id="ipinFlag" name="ipinFlag" value="">
-            <input type="hidden" id="nid-kb2" name="nid-kb2" value="">
-
-            <!-- container -->
+        <form id="join-form" method="post" action="https://nid.naver.com/user2/V2Join?token_sjoin=C2WMbvSV6jALrZ61&langSelect=ko_KR&termsService=on&termsPrivacy=on&termsLocation=Y">
+            <!-- container(Main) -->
             <div id="container" role="main">
                 <div id="content">
                     <!-- tg-text=title -->
@@ -50,7 +31,7 @@
                                 <span class="ps-box int-id">
                                     <input type="text" id="id" name="id" class="int" title="ID" maxlength="20">
                                     <span class="step-url">@naver.com</span></span>
-                                    <span class="error-next-box" id="idMsg" style="display:none" aria-live="assertive">필수 정보입니다.</span>
+                                    <span class="sign-up-error" id="idMsg" style="display:none" aria-live="assertive">필수 정보입니다.</span>
                             </div>
                             <div class="join-row">
                                 <h3 class="join-title"><label for="pswd1">비밀번호</label></h3>
@@ -59,15 +40,15 @@
                                     <span class="lbl"><span id="pswd1Span" class="step-txt"></span>
                                 </span>
                                 </span>
-                                <span class="error-next-box" id="pswd1Msg"style="display:none" aria-live="assertive">필수 정보입니다.</span>
+                                <span class="sign-up-error" id="pswd1Msg"style="display:none" aria-live="assertive">필수 정보입니다.</span>
                                 <h3 class="join-title"><label for="pswd2">비밀번호 재확인</label></h3>
                                 <span class="ps-box int-pass-check" id="pswd2Img">
                                     <input type="password" id="pswd2" name="pswd2" class="int" title="비밀번호 재확인 입력"
                                         aria-describedby="pswd2Blind" maxlength="20">
                                     <span id="pswd2Blind" class="wa-blind">설정하려는 비밀번호가 맞는지 확인하기 위해 다시 입력 해주세요.</span>
                                 </span>
-                                <span class="error-next-box" id="pswd2Msg" style="display:none" aria-live="assertive">필수 정보입니다.</span>
-                            </div>
+                                <span class="sign-up-error" id="pswd2Msg" style="display:none" aria-live="assertive">필수 정보입니다.</span>
+                                </div>
                         </div>
                         <!-- // 아이디, 비밀번호 입력 -->
                         <!-- 이름, 생년월일 입력 -->
@@ -78,7 +59,7 @@
                                 <span class="ps-box box-right-space">
                                     <input type="text" id="name" name="name" title="이름" class="int" maxlength="40">
                                 </span>
-                                <span class="error-next-box" id="nameMsg" style="display:none"
+                                <span class="sign-up-error" id="nameMsg" style="display:none"
                                     aria-live="assertive">필수 정보입니다.</span>
                             </div>
                             <!-- lang = ko-KR -->
@@ -143,8 +124,8 @@
                                         </span>
                                     </div>
                                 </div>
-                                <span class="error-next-box" id="birthdayMsg" style="display:none"
-                                    aria-live="assertive"></span>
+                                <span class="sign-up-error" id="birthdayMsg" style="display:none"
+                                    aria-live="assertive">필수 정보입니다.</span>
                             </div>
 
                             <div class="join-row join-sex">
@@ -158,8 +139,8 @@
                                     </select>
                                 </div>
                             </div>
-                            <span class="error-next-box" id="genderMsg" style="display:none"
-                                aria-live="assertive"></span>
+                            <span class="sign-up-error" id="genderMsg" style="display:none"
+                                aria-live="assertive">필수 정보입니다.</span>
 
                             <div class="join-row join-email">
                                 <h3 class="join-title"><label for="email">본인 확인 이메일<span
@@ -174,15 +155,71 @@
                         </div>
                         <!-- // 이름, 생년월일 입력 -->
 
-
                         <div class="btn-area">
-                            <button type="button" id="btnJoin" class="btn-type btn-primary"><span>가입하기</span></button>
+                            <button type="button" onClick="onSubmitHandler();" id="btnJoin" class="btn-type btn-primary"><span>가입하기</span></button>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- // container -->
         </form>
+        <script>
+            const form = document.querySelector('#join-form');
+
+            function onSubmitHandler() {
+                event.preventDefault();
+
+            const idInput = document.querySelector('#id');
+            const pswd1Input = document.querySelector('#pswd1');
+            const pswd2Input = document.querySelector('#pswd2');
+            const nameInput = document.querySelector('#name');
+            const birthdayInput = document.querySelector('#yy','#mm','#dd');
+            const genderInput = document.querySelector('#gender');
+
+            const idError = document.querySelector('#idMsg');
+            const pswd1Error = document.querySelector('#pswd1Msg');
+            const pswd2Error = document.querySelector('#pswd2Msg');
+            const nameError = document.querySelector('#nameMsg');            
+            const birthdayError = document.querySelector('#birthdayMsg');
+            const genderError = document.querySelector('#genderMsg');
+
+            if (!idInput.value) {
+                idError.style.display = 'block';
+            } else {
+                idError.style.display = 'none';
+            }
+
+            if (!pswd1Input.value) {
+                pswd1Error.style.display = 'block';
+            } else {
+                pswd1Error.style.display = 'none';
+            }
+
+            if (!pswd2Input.value) {
+                pswd2Error.style.display = 'block';
+            } else {
+                pswd2Error.style.display = 'none';
+            }
+            if (!nameInput.value) {
+                nameError.style.display = 'block';
+            } else {
+                nameError.style.display = 'none';
+            }
+
+            if (!birthdayInput.value) {
+                birthdayError.style.display = 'block';
+            } else {
+                birthdayError.style.display = 'none';
+            }
+
+            if (!genderInput.value) {
+                genderError.style.display = 'block';
+            } else {
+                genderError.style.display = 'none';
+            }
+        }
+        form.addEventListener('submit', onSubmitHandler);
+        </script>
         <!-- footer -->
         <div id="footer" role="contentinfo">
             <ul>
@@ -190,7 +227,7 @@
                 <li><strong><a href="http://policy.naver.com/policy/privacy.html">개인정보처리방침</a></strong></li>
                 <li><a href="http://policy.naver.com/rules/disclaimer.html">책임의 한계와 법적고지</a></li>
                 <li><a href="https://help.naver.com/support/alias/membership/p.membership/p.membership-26.naver"
-                        target="_blank">회원정보 고객센터 </a></li>
+                        target="-blank">회원정보 고객센터 </a></li>
             </ul>
             <address>
                 <em><a href="https://www.navercorp.com/" target="-blank" class="logo"><span
@@ -203,7 +240,5 @@
         </div>
         <!-- //footer -->
     </div>
-
 </body>
-
 </html>
